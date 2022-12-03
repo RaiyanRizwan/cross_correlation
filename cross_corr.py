@@ -20,7 +20,6 @@ def compute_corr(signal, received):
 	for s in range(k):
 		signal_shifted = shift(signal, s)
 		corrs.append(round(inner_product(signal_shifted, received), 2))
-	print(corrs)
 	highest_corr = max(corrs)
 	return (highest_corr, corrs.index(highest_corr))	
 
